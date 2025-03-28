@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT CACTUS</title>
+   
+</head>
+<body>
+    <header>
+        
+        <div class="headerBlock">
+            
+            <div class="headerRight">
+                <p>ITCACTUS</p>
+            </div>
+            
+            <div class="headerLeft">
+                <img src="#" alt="Logo">    
+            </div>
+        </div>
+ 
+    </header>
+    <main>    
+        <p id="vsCodeTools" style="cursor: pointer; color: blueviolet;">
+            Топ-6 Расширений для VS Code: Ускоряем Работу с Кодом!
+        </p>
+        <iframe id="FirstVideo" width="560" height="315" src="https://www.youtube.com/embed/7DaQQYNNEdU?si=gVI7v5imTA2ft9pl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;  gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+    </main>
+    
+    <script>
+        document.getElementById('vsCodeTools').addEventListener('click', function() {
+            // Показываем iframe
+            const iframe = document.getElementById('FirstVideo');
+            iframe.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

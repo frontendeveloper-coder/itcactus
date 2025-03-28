@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITCACTUS</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        
+        <div class="headerBlock">
+            
+            <div class="headerRight">
+                <p style="color: #f44fca;"><span style="color: red;">IT</span>CACTUS</p>
+            </div>
+            
+            <div class="headerLeft">
+                <img src="./image/free-icon-burger-menu-10613684.png" alt="Menu" class="menuIcon">    
+            </div>
+            
+        </div>
+ 
+    </header>
+    
+    <main class="main">
+        
+        <div class="ItBlocks">
+            <!-- Блок YouTube -->
+            <div class="itCactusYoutube">
+                <p style="text-align: center;">YouTube Channel</p>
+                <a href="./pages/youtubeVideos.html" onclick="handleClick(event, this)">
+                    <img src="./image/youtubeicon.png" alt="YouTube">
+                </a>
+            </div>
+    
+            <!-- Блок It-News -->
+            <div class="itCactusNews">
+                <p style="text-align: center;">It-News</p>
+                <a href="#" onclick="handleClick(event, this)">
+                    <img src="./image/itnews.jpg" alt="ItNews">
+                </a>
+            </div>
+    
+            <!-- Блок EconomyNews -->
+            <div class="itCactusNews">
+                <p style="text-align: center;">EconomyNews</p>
+                <a href="#" onclick="handleClick(event, this)">
+                    <img src="./image/5d3cd173ffb408c42747fa251d7ba582.jpg" alt="YouTube">
+                </a>
+            </div>
+        </div>
+        
+    </main>
+    
+    <script>
+        let currentHighlightedBlock = null; // Текущий выделенный блок
+
+// Функция для обработки клика
+function handleClick(event, link) {
+    event.preventDefault(); // Отменяем стандартное поведение ссылки
+
+    const block = link.closest('.itCactusYoutube, .itCactusNews'); // Находим блок
+
+    if (block === currentHighlightedBlock) {
+        // Если кликнут уже выделенный блок, переходим по ссылке
+        window.location.href = link.href;
+    } else {
+        // Если кликнут другой блок
+        if (currentHighlightedBlock) {
+            // Убираем выделение с предыдущего блока
+            currentHighlightedBlock.classList.remove('highlight');
+        }
+
+        // Выделяем новый блок
+        block.classList.add('highlight');
+        currentHighlightedBlock = block; // Обновляем текущий выделенный блок
+    }
+}
+        
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+.headerBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f2e900; 
+}
+
+
+body{
+    color: #f2e900;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0; /* Убирает отступы по умолчанию */
+    min-height: 100vh; /* Занимает минимум всю высоту экрана */
+    background: url(../image/img1.akspic.ru-kiberpank_art_dangyuz-art-cifrovoe_iskusstvo-kiberpank-anime_art-1440x2560.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Центрирует изображение */
+    background-attachment: fixed; /* Фиксирует фон при прокрутке (опционально) */
+}
+
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.ItBlocks img {
+    width: 300px !important;
+    height: 250px !important;
+    border-radius: 10%;
+    border: 5px solid #f2e900;
+}
+
+.menuIcon{
+  width: 50px;
+  height: 50px; 
+}
+
+
+/**/
+
+
+/* Общие стили для контейнера */
+.ItBlocks {
+    display: flex
+;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itCactusYoutube, 
+.itCactusNews {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: center;
+}
+
+.itCactusYoutube:hover,
+.itCactusNews:hover {
+        transform: scale(1.02);
+}
+
+.highlight {
+        transform: scale(1.1) !important;
+        z-index: 10;
+}

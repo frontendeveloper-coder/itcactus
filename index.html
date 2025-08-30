@@ -14,11 +14,21 @@
         <div class="headerBlock">
             
             <div class="headerRight">
-                <p style="color: #f44fca;"><span style="color: red;">IT</span>CACTUS</p>
+                <p style="color: #2A2353;"><span style="color: #2A2353;">IT 🌵</span>CACTUS</p>
             </div>
             
             <div class="headerLeft">
-                <img src="./image/free-icon-burger-menu-10613684.png" alt="Menu" class="menuIcon">    
+                
+                <button type="button" class="menu-button" id="menuButton">
+                    <img src="./image/menu.png" alt="Menu" class="menuIcon" title="Icon made by Pixel perfect from www.flaticon.com">
+                </button>
+                
+                <nav id="menu" class="hidden-menu">
+                    <ul>
+                        <li>jfkdhk</li>
+                    </ul>
+                </nav>
+                
             </div>
             
         </div>
@@ -55,32 +65,7 @@
         
     </main>
     
-    <script>
-        let currentHighlightedBlock = null; // Текущий выделенный блок
-
-// Функция для обработки клика
-function handleClick(event, link) {
-    event.preventDefault(); // Отменяем стандартное поведение ссылки
-
-    const block = link.closest('.itCactusYoutube, .itCactusNews'); // Находим блок
-
-    if (block === currentHighlightedBlock) {
-        // Если кликнут уже выделенный блок, переходим по ссылке
-        window.location.href = link.href;
-    } else {
-        // Если кликнут другой блок
-        if (currentHighlightedBlock) {
-            // Убираем выделение с предыдущего блока
-            currentHighlightedBlock.classList.remove('highlight');
-        }
-
-        // Выделяем новый блок
-        block.classList.add('highlight');
-        currentHighlightedBlock = block; // Обновляем текущий выделенный блок
-    }
-}
-        
-    </script>
+    <script src="/js/main.js"></script>
     
 </body>
 

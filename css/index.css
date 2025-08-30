@@ -1,11 +1,3 @@
-.headerBlock {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #f2e900; 
-}
-
-
 body{
     color: #f2e900;
     font-size: 20px;
@@ -20,7 +12,25 @@ body{
     background-attachment: fixed; /* Фиксирует фон при прокрутке (опционально) */
 }
 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../image/img1.akspic.ru-kiberpank_art_dangyuz-art-cifrovoe_iskusstvo-kiberpank-anime_art-1440x2560.jpg)
+                no-repeat center center / cover;
+    filter: blur(8px); /* здесь размытие */
+    z-index: -1; /* отправляем назад */
+}
 
+.headerBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fefefe; 
+}
 
 .main{
     display: flex;
@@ -37,10 +47,24 @@ body{
 }
 
 .menuIcon{
-  width: 50px;
-  height: 50px; 
+    width: 37px;
+    height: 34px;
 }
 
+.menu-button {
+    background-color: transparent;    
+    border: none;
+}
+
+.hidden-menu {
+    display: none;
+}
+
+#menu {
+    background-color: #2A2353;
+    width: 200px;
+    color: #fefefe;
+}
 
 /**/
 
